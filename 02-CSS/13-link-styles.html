@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Styles</title>
+
+    <style>
+        /* div blogu icinde class ismi menu olan ne varsa arka fon rengi degisecek
+            ve div blogu icindeki tum yazilar ortaya hizalanacak */
+        div.menu{
+            background-color: aqua;
+            text-align: center;
+        }
+
+        /* class ismi menu olanin icindeki tum a'larin rengi blueviolet olacak */
+        .menu a{  
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        /* a'nin icinde class ismi elma olan isim blue olacak */
+        a.elma{ 
+            color: blue;
+        }
+
+        /* class ismi menu olanin icindeki tum a'larin uzerine gelindiginde 
+            background yellowgreen olacak */
+        .menu a:hover{
+            background-color: yellowgreen;
+            color: red;
+        }
+
+        /* class ismi menu olanin icindeki tum a 'lar uzerine tiklandiginda yellow 
+            olur */
+        .menu a:active{  
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a class="elma" href="">Home</a>
+        <a href="">Projects</a>
+        <a href="">Contacts</a>
+        <a href="">Students</a>
+    </div>
+</body>
+</html>

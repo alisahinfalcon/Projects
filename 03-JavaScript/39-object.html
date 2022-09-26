@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const araba = {
+            marka:'Mercedes',
+            model:'E200',
+            color:'Black',
+            shiftNumber:8
+        };
+
+        console.log(araba);
+        console.log(typeof(araba));
+        document.write(araba);
+        //console.log(shiftNumber); //  Hata verir. Bu sekilde object icindeki veriye ulasamayiz
+        console.log(araba.shiftNumber); //  8
+        console.log(araba.color);   //  Black
+        console.log(araba.Color);   //  undefined cunku uppercase ile baslayan Color yok
+    </script>
+</body>
+</html>

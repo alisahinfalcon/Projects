@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .btn {
+        background-color: aquamarine;
+        border: 0; 
+        padding: 0.5rem 1rem; 
+        border-radius: 0.3rem; 
+      }
+
+      .sayilar {
+        padding: 0.3rem 1rem; 
+        border: 1px solid gray;
+        border-radius: 0.3rem;
+      }
+
+      .liste {
+        width: 100px;
+        border: 1px solid gray;
+        border-radius: 0.3rem;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <input
+        type="number" name=""
+        id="boxNum"   placeholder="Input a number" class="sayilar">
+      <input
+        type="button" value="Ekle"
+        id="btnEkle"  class="btn"  onclick="addNumber()">
+
+    </div>
+
+    <div style="margin-top: 1rem">
+      <select size="10" id="lstNumbers" class="liste">
+      </select>
+    </div>
+
+    <div style="margin-top: 1rem">
+      <input
+        type="button" value="Delete" 
+        id="btnErase" class="btn"  onclick="erase()">
+      <input
+        type="button" value="Mean"
+        id="btnMeans" class="btn" onclick="means()">
+      <input
+        type="button"  value="Median"
+        id="btnMedian" class="btn" onclick="median()">
+    </div>
+
+    <table style="margin-top: 0.5rem">
+      <tr>
+        <td style="text-align: right;" id="">&nbsp Mean &nbsp</td>
+        <td style="text-align: left;" id="">=> &nbsp</td>
+        <td style="text-align: left;" id="boxMean"></td>
+      </tr>
+      <tr>
+          <td style="text-align: right;" id="">&nbsp Median &nbsp</td>
+          <td style="text-align: left;" id="">=> &nbsp</td>
+          <td style="text-align: left;" id="boxMedian"></td>
+        </tr>
+    </table>
+
+    <script>
+      let arrayNumbers = [12, 56, 33, 67, 89, 44, 23, 67, 11, 19, 33, 22, 89, 34, 40, 23, 38];
+      renewList();
+      console.log(arrayNumbers);
+      
+//----------------------------------      
+      function renewList(){ 
+        let strOption = "";
+
+        for( let i = 0 ; i < arrayNumbers.length ; i++) { 
+            strOption += `<option>${arrayNumbers[i]}</option>`;
+        }
+        document.querySelector("#lstNumbers").innerHTML = strOption;
+      }
+//----------------------------------
+      function addNumber(){
+        let newNum = document.querySelector("#boxNum").value;
+        let newNumber = Number(newNum);
+        arrayNumbers.push(newNumber);
+        renewList();
+      }
+//----------------------------------
+      function erase(){
+        const index = document.querySelector("#lstNumbers").selectedIndex;
+            //alert(index);    
+        arrayNumbers.splice(index,1); 
+        renewList(); //  
+      }
+//----------------------------------
+      function means(){
+        let sum = 0;
+        let average = 0;
+
+        for(let i = 0 ; i < arrayNumbers.length ; i++ ){
+          sum = sum + arrayNumbers[i];
+        }
+        average = sum / arrayNumbers.length;
+        console.log(sum + '---' + average);
+        document.querySelector("#boxMean").innerHTML = average.toFixed(2);        
+      }
+//----------------------------------
+      function median(){
+        arrayNumbers.sort(function (a, b) {return a - b});
+        console.log(arrayNumbers);
+        let a = arrayNumbers.length;
+        let valMedian = 0;
+      
+        if(a%2 == 0){
+         valMedian = (arrayNumbers[a/2] + arrayNumbers[a/2 - 1]) / 2; 
+          console.log(valMedian + " --- " + a);
+          console.log("Cift");
+        }
+        else{
+          valMedian = arrayNumbers[(a - 1)/2]; 
+          console.log(valMedian + " --- " + a);
+          console.log("Tek");
+        }
+        document.querySelector("#boxMedian").innerHTML = valMedian.toFixed(2);        
+      }
+
+    </script>
+  </body>
+</html>

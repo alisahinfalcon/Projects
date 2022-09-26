@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Fiyat</title>
+</head>
+<body>
+    
+    <input type="text" id="txtFiyat" placeholder="Fiyat">
+    <input type="button" value="Hesapla" onclick="onsale()" id="btnhesap">
+    <!-- <button id="btnHesapla" onclick="onsale()">Hesapla</button> -->
+
+    <!-- <div style="margin-top: 0.5rem;" id="lblsonuc"></div>  -->
+
+    <p style="margin-top: 0.25;" id="lblsonuc"></p>
+
+    <script>
+        function onsale(){
+            let fiyat = document.querySelector("#txtFiyat").value;
+            fiyat = Number(fiyat);
+            
+            switch( true ){
+                case( fiyat > 1500 ):
+                    fiyat = fiyat * 0.85;
+                    break;
+                case( fiyat > 1000 ):
+                    fiyat = fiyat - fiyat * 0.13;
+                    break;
+                case( fiyat > 700 ):
+                    fiyat = fiyat * 0.90;
+                    break;
+                case( fiyat > 500 ):
+                    fiyat = fiyat * 0.93;
+                    break;
+                case( fiyat > 300 ):
+                    fiyat = fiyat * 0.95;
+                    break;
+                default:
+                    fiyat = fiyat - fiyat * 0.02;
+            }    
+             
+            document.querySelector("#lblsonuc").innerHTML = `<br> Son Fiyat = ${fiyat}`;            
+        }
+        
+    </script>
+</body>
+</html>

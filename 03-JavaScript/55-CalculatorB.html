@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+      <br>
+      <input type="button" id="numBoxPer" value="a"  onclick="boxButton('%')">
+      <input type="button" id="numBoxCE"  value="e" onclick="boxButton('CE')">
+      <input type="button" id="numBoxCC"  value="c"  onclick="boxButton('CC')">
+      <input type="button" id="numBoxDiv" value="/ "  onclick="boxButton('/')">
+      <br/>
+      <input type="button" id="numBox7"  value="7"  onclick="boxButton(7)">
+      <input type="button" id="numBox8"  value="8"  onclick="boxButton(8)">
+      <input type="button" id="numBox9"  value="9"  onclick="boxButton(9)">
+      <input type="button" id="numBoxSt" value="* " onclick="boxButton('*')">
+      <br />
+      <input type="button" id="numBox4"  value="4" onclick="boxButton(4)">
+      <input type="button" id="numBox5"  value="5" onclick="boxButton(5)">
+      <input type="button" id="numBox6"  value="6" onclick="boxButton(6)">
+      <input type="button" id="numBoxSb" value="- " onclick="boxButton('-')">
+      <br/>
+      <input type="button" id="numBox1"  value="1" onclick="boxButton(1)">
+      <input type="button" id="numBox2"  value="2" onclick="boxButton(2)">
+      <input type="button" id="numBox3"  value="3" onclick="boxButton(3)">
+      <input type="button" id="numBoxPl" value="+" onclick="boxButton('+')">
+      
+      <br/>
+      <input type="button" id="numBoxPm" value="p" onclick="boxButton('_')">
+      <input type="button" id="numBoxZr" value="0" onclick="boxButton(0)">
+      <input type="button" id="numBoxPt" value=". " onclick="boxButton('.')">
+      <input type="button" id="numBoxEq" value="=" onclick="boxButton('=')">
+      <br>  
+      <br>
+
+      <h1 id="www"></h1>
+      <h1 id="sss"></h1>
+
+      <tr>
+        <td style="text-align: center;" id="azs"> </td>
+      </tr>
+
+    <script>
+      
+      function boxButton(x){
+
+        var s1 = 8;
+        var s2 = 2;
+        //document.querySelector("#www").innerHTML = s1 + s2;
+        if( isNaN(x) == true ){
+          switch( true ){
+                case( x == '+' ):
+                    document.querySelector("#sss").innerHTML = summation(s1, s2);
+                    break;
+                case( x == '-' ):
+                    document.querySelector("#sss").innerHTML = subtraction(s1, s2);
+                    break;
+                case( x == '*' ):
+                    document.querySelector("#sss").innerHTML = multiplication(s1, s2);
+                    break;
+                case( x == '/' ):
+                    document.querySelector("#sss").innerHTML = division(s1, s2);
+                    break;
+                default:
+                    fiyat = fiyat - fiyat * 0.02;
+          }
+        }
+        else{
+          document.querySelector("#www").innerHTML = s1;
+
+        }
+        //document.querySelector("#sss").innerHTML = s1;
+      }
+
+      function summation(s1, s2){return s1+ s2;};
+      function subtraction(s1, s2){return s1 - s2};
+      function division(s1, s2){return s1 / s2};
+      function multiplication(s1, s2){return s1 * s2};
+
+    </script>
+  </body>
+</html>

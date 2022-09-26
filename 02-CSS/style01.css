@@ -1,0 +1,13 @@
+
+/* css dosyalarinda aciklamalar apex dekine benzer sekilde yapiliyor */
+
+p{
+    color:blue;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color:red;
+    text-align: center;
+    background-color: goldenrod;
+}

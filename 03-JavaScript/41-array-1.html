@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let kurslar1 = ["Javascript", "Salesforce", "Data Science", "Python"];
+        console.log(kurslar1);   //  4 elemanli bir array oldugunu dizinin
+                                //  icerikleriyle gosterir
+
+        console.log(kurslar1[1]);    //  Salesforce yazar
+        console.log(kurslar1[kurslar1.length-1]); //  Python
+
+
+        const kurslar2 = ["Javascript", "Salesforce", "Data Science", "Python"];
+
+        kurslar2[0] = "React";  //  const ile tanimlanmasina ragmen degistirebildik
+        kurslar2[2] = "Java";   //  cunku array 'ler non-primitive oldugu icin
+                                //  degistirilebilir.
+        console.log(kurslar2);
+
+
+        //kurslar2 = ["Ali", "Veli"];
+        console.log(kurslar2);  //  const ile tanimlanmissa array 'i komple 
+                                //  degistirmeye izin yoktur'
+        
+        //  Buradaki tanimlamayi const yerine let ile yaparsak bu durumda
+        //  komple degisime izin vermektedir
+        
+        let kurslar3 = ["Javascript", "Salesforce", "Data Science", "Python"];
+        console.log(kurslar3);
+        
+        kurslar3 = ["Ali", "Veli"];
+        console.log(kurslar3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selectors</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>    <!-- id isimleri unique olurlar -->  
+            <li class="kutu" id="kutu1">Anasayfa</li>
+            <li class="kutu">Hakkimizda</li>
+            <li class="kutu">Iletisim</li>
+            <!-- burada id ismi yerine class da secilebilirdi -->
+        </ul>
+    </nav>
+
+    <script>
+        let menu1 = document.querySelector(".menu");
+        /*  css secicilerini kullaniyoruz
+            .menu (class ismi menu olan) elementi (nav'i) sectik */
+        console.log(menu1);
+
+        let sec = document.querySelector("#kutu1");
+        /* id'si kutu1 olan (elemani) li'yi sectik. 
+        Sonra da bunu 'sec' isimli variable'a atayalim */
+        //console.log(sec);
+        // console.log(kutu1); /* seklinde de yazilabilir */
+
+        console.log(sec.innerText);
+        /* sec'in icindeki tum li'leri degil sadece 
+            kutu1 'deki text'i (anasayfa) secer (okur)*/
+
+        /* Ana sayfa icerisindeki text'i degistirelim */
+        sec.innerText = "Merhaba Dunya";    /* Anasayfa'yi Merhaba Dunya ile degistirdik */
+
+        /* Merhaba Dunya'yi bold yazdiralim */
+        sec.innerText = "<b> Merhaba Dunya <b>"; /* <b> Merhaba Dunya <b> yazdi */
+        /* innerText html tag'larini algilamaz. Bunun yerine innerHTML kullanalim */
+        sec.innerHTML = "<b> Merhaba Dunya <b>";
+        /* innerHTML html tag'larini algilar. 
+            Herhangi bir tag yazmasakda innerText gibi calisir */
+
+        //let hepsi = document.querySelector(".kutu");
+        /* seklinde ifade edersek class ismu kutu olan ilk li'yi secer */
+        let hepsi = document.querySelectorAll(".kutu");
+        console.log(hepsi);
+
+
+
+    </script>
+</body>
+</html>

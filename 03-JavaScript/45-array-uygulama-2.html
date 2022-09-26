@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Uygulama</title>
+
+    <style>
+        /*  5.  Butonlara Style tanimlayalim*/
+        .btn{
+            background-color: aquamarine;
+            border: 0;              /*  6.  Butonlarin cercevelerini kaldirdik   */
+            padding: 0.5rem 1rem;   /*  7.  Butonlara icindeki yazilari ustten alttan 0.5rem 
+                                            sagdan soldan 1rem uzaklastirdik  */
+            border-radius: 0.3rem;  /*  8.  Butonlarin kenarlari oval olsun   */
+        }
+
+        .isim{
+            padding: 0.3rem 1rem;   /* 11.  text box ekle butonuyla ayni buyuklukte oldu */
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+        }
+
+        .liste{     /* 12.  List box kismi */
+            width: 260px;
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1.  Text box ile Ekle butonunu gruplandirmak icin div arasina yazalim -->
+
+    <div>
+        <input type="text" name="" id="txtAd" placeholder="Adinizi giriniz" class="isim">
+                                                    <!-- 9.  class isim tanimlandi -->
+        <input type="button" value="Ekle" id="btnEkle" class="btn" onclick="ekle()">
+                                                    <!-- 21. onclick ile ekle() fonksiyonu 
+                                                        fonksiyonu olusturup button'a bagliyali -->
+    </div>
+
+    <!-- 2.  Lıst box ıcın yenı bır dıv olusturalım -->
+    
+    <div style="margin-top: 1rem">  <!-- 13.  div 'lerin arasini actik' -->
+        <select size="10" id="lstAdlar" class="liste">  <!-- 3.  10 adet isim gostermesini istiyoruz -->
+                                                        <!-- 10.  class liste tanimlandi -->
+        </select>
+    </div>
+
+    <!-- 4.  div arasinda iki adet input olusturalim -->
+
+    <div style="margin-top: 1rem">  <!-- 14.  div 'lerin arasini actik' -->
+        <input type="button" value="Sil" id="btnSil" class="btn" onclick="sil()"> 
+                                                <!-- 26. sil() fonksiyonu olusturduk -->
+        <input type="button" value="Sirala (A - Z)" id="btnSirala" class="btn" onclick="sirala()">
+                                                <!-- 32  siralaya onclick verdik -->
+        <input type="button" value="Sirala (Z - A)" id="btnTersSirala" class="btn" onclick="tersSirala()">
+                                                <!-- 36  ters siralama icin onclick verdik -->
+    </div>
+
+
+    <script>
+
+        let arrNames = ["Ali", "Veli", "Ayse", "Zeki", "Peri","Kemal", 
+                                "Mehmet", "Davut", "Jale","Ziya", "Banu", "Oya"]; 
+        /* 15.  default olarak birkac isim ekledim */
+        /* 16.  ilk olarak select icerisine option'lari yerlestirelim. 
+                Bu maksatla bir doldurma fonksiyonu kuralim */
+        /* -------------------  Diziyi ara ara guncelleyen fonksiyonu tanimlayalim ------------ */
+
+        function fillList(){ 
+            let strOption = ""; /* 17.  dizinin elemanlarini yerlestirecegimiz bir alan actik */
+
+            for( let i = 0 ; i < arrNames.length ; i++) { /* 18.  dizinin icinde gezinecegiz ve her donusunde 
+                                                                  bir option 'i select icinde olusturacagiz */
+
+                strOption += `<option>${arrNames[i]}</option>`;
+            }
+            document.querySelector("#lstAdlar").innerHTML = strOption;
+        }
+        fillList();        
+
+        /* -------------------  22.  ekle fonksiyonu olusturalim ------------ */
+
+        function ekle(){
+            /* 23. Once textBox'tan degeri alalim  */
+
+            const ad = document.querySelector("#txtAd").value;
+            arrNames.push(ad);  //  24. Diziye ekleme yaptik
+            fillList(); //  25. Eklenen yeni ismi diziye ekledi ve boxta gosterdi
+
+        }
+
+        /* -------------------  27.  sil fonksiyonu olusturalim ------------ */
+
+        function sil(){
+            const index = document.querySelector("#lstAdlar").selectedIndex;
+                            //  28.  Tum listeyi sectim sonrada tiklanan elemanin index numarasini aldim
+
+            //alert(index);    //  29. secip sil'e basinca index numarasini gosteriyor
+            arrNames.splice(index,1);   //  30.  index nolu dizi elemanini siler
+            fillList(); //  31. Her seferinde listenin goruntusunu guncellesin diye cagiriyorum
+        }
+
+        /* -------------------  33.  sirala fonksiyonu olusturalim ------------ */
+
+        function sirala(){
+            arrNames.sort();    //  34. diziyi alfabetic siralar
+            fillList();         //  35. box ixindeki isim listesini guncelledik
+        }
+
+        /* -------------------  37.  ters sirala fonksiyonu olusturalim ------------ */
+
+        function tersSirala(){
+            //console.log(arrNames);
+            //arrNames.sort(function(a, b){return b-a;});
+            //console.log(arrNames);
+            arrNames.sort();    //  38.  Once diziyi alfabetic siralar
+            arrNames.reverse(); //  39.  Alfabetic sirali diziyi tersine cevirir
+            fillList();
+        }
+
+
+    </script>
+</body>
+</html>

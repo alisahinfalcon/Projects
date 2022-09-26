@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .btn {
+        background-color: aqua;
+        border: 0; 
+        padding: 1.5rem 2rem; 
+        border-radius: 0.3rem; 
+      }
+    </style>
+
+  </head>
+  <body>
+    <p>
+      Bir dizi icerisindeki sayilarin genel ortalamasindan kucuk olan, <br>
+      kac adet sayi oldugunu bulan programi yaziniz
+    </p>
+    <p>Ornek dizimiz <br>
+      [12, 56, 33, 67, 89, 44, 23, 67, 11, 19, 33, 22, 89, 34, 40, 23, 38]
+    </p>
+
+    <div style="margin-top: 1rem">
+      <input
+        type="button"  value="Problem Solution"
+        id="btnProblem" class="btn" onclick="problem()">
+    </div>
+
+    <script>
+      let arrayNumbers = [12, 56, 33, 67, 89, 44, 23, 67, 11, 19, 33, 22, 89, 34, 40, 23, 38];
+      //console.log(arrayNumbers);
+      
+      //  ----------------------------Event fonksiyon ------------------        
+      function problem(){
+        let sum = 0;
+        let average = 0;
+
+        for(let i = 0 ; i < arrayNumbers.length ; i++ ){
+          sum = sum + arrayNumbers[i];
+        }
+        average = sum / arrayNumbers.length;
+        const result = numsUnderAverage(average);
+
+        alert("Number of element that is less than the average at the array is " + result);
+
+        console.log(average + ' ' + result);
+
+        document.write(average + ' ' + result);
+      }
+      //  ----------------------------Jenerik fonksiyon ----------------
+
+      function numsUnderAverage(xAverage){
+        let countX = 0;
+
+        for (let i = 0; i < arrayNumbers.length; i++){
+
+          if( arrayNumbers[i] < xAverage ){
+            countX++; //countX = countX + 1;
+          }
+
+        }
+        console.log(countX);
+        return countX;
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=t, initial-scale=1.0">
+    <title>Table Application</title>
+
+</head>
+<!-- <table> : Web sayfasina satir ve sutunlardan olusan liste seklinde yapilar 
+    eklemek icin kullanilir. Genellikle uru fiyat listeleri tablolar ile 
+    hazirlanmaktadir -->
+<!-- Sutun = Veri alani olarak adlandirilir. Satir'lari ise satir olarak ifade ederler -->
+<!-- Tablo olusturmak icin <table> kullanilir ve cok fazla tag'i vardir. Tablonun baslik 
+    bolumundeki hucreler (sutun) <thead> icinde bulunur. 
+    Veri hucreleri <tbody> icerisinde bulunur. Foter hucreleride <tfoot> icinde bulunur -->
+<!-- thead, tbody, tfoot kullanmak zorunlu degildir ancak CSS ile style tanimlarken 
+    buyuk kolaylik olur -->
+
+<body>
+<!-- <tr> tablo icerisinde satir olusturmak icin kullanilir.
+     <td> Veri hucresi (sutun) olusturmak icin kullanilir. 
+     <th> Baslik hucresi (sutun) olusturmak icin kullanilir. -->
+<!-- border 1 ...5  arasi cercevenin kalinligini artirir -->
+<!-- thead>tr>th*5 yazilirsa table header tag'i olusturur ve ardindan bize bir satir
+    acar. th (table header) ile de bize sutun acar. -->
+    <table border="5">
+        <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Adi</th>
+                <th>Soyadi</th>
+                <th>Dogum tarihi</th>
+                <th>Maas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ali</td>
+                <td>Sahin</td>
+                <td>11.12.1987</td>
+                <td>12000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Veli</td>
+                <td>Aslan</td>
+                <td>05.07.2005</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ayse</td>
+                <td>Yesil</td>
+                <td>01.01.1999</td>
+                <td>26000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Ortalama</td>
+                <td>17000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

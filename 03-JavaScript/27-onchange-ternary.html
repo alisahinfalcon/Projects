@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Onchange</title>
+</head>
+<body>
+    
+    <input type="radio" name="ortak" id="emekli" onchange="hesapla('e')">
+    <label for="emekli">Emekli</label> <!-- label'in for'u icin input'un Id'si -->
+    <!-- isterse button icine bas, istersen yanindaki yaziya (emekli/calisan) bas
+        her iki durumda da radio'larin icini doldurur. Bunu for ile id arasindaki
+        iliski sayesinde elde ederiz -->
+    <br>
+    <input type="radio" name="ortak" id="calisan" onchange="hesapla('c')">
+    <label for="calisan">Calisan</label>
+
+    <div id="sonuc"></div>
+
+    <script>
+        function hesapla(tip){
+            //alert(tip);
+            let maas = 20000;
+
+            maas = (tip == "e") ? (maas - maas * 0.10) : maas ;
+
+            document.querySelector("#sonuc").innerHTML = `<br> Maas = ${maas}`
+        }
+    </script>
+</body>
+</html>

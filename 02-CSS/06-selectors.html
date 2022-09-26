@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+
+    <style>
+        /*  *{}  kullanarak icerisine yazilan komut butun html ifadelerini kapsar */
+        *{
+            color:blueviolet;
+            text-align: center;
+        }
+        h1{
+            color: black;
+            text-align: right;
+            font-weight: 300;
+        }
+        p{
+            text-align: right;
+        }
+        
+        .ortala{
+            text-align: left;
+            color:red; /* Ozel tanimlamalar genel tanimlamalari ezer, onceliklidir */
+        }
+        h3.ortala{  /* class ismi ortala olan h3: Daha specific bir tanimlama oldu */
+            color: blue;
+        }
+
+        .elma{
+            color:black;
+            background-color: cadetblue;
+            text-align: center;
+        }
+        h3.elma{
+            color:black;
+            background-color: cadetblue;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <h1>Merhaba</h1>
+    <a href="https://google.com">TIKLA</a>
+    <p class="elma">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusamus
+      ratione delectus consequuntur similique laborum vero dolor. Obcaecati
+      laudantium corporis at, aliquid quasi, ab suscipit harum eaque quaerat
+      explicabo porro? Similique itaque nam facere quod neque a ducimus minima,
+      eligendi fugit obcaecati ipsum est dolores porro voluptatibus autem
+      assumenda odit nesciunt quidem corrupti. Eaque corrupti quas, eius ipsum
+      labore fugit.
+    </p>
+
+    <h3 class="ortala">Developer</h3>
+    <h3 class="elma">Salesforce</h3>
+ 
+    <p class="ortala">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio
+      laudantium nam enim cumque sapiente reprehenderit placeat, temporibus
+      similique voluptas vel a deleniti veritatis quisquam ea fuga dignissimos!
+      Blanditiis, quibusdam?
+    </p>
+  </body>
+</html>

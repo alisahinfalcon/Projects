@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let s2 = "Kus";
+        let s3 = "Kedi";
+
+    //  || isleminde ilk TRUE degerin bulunmasi yeterlidir. Digerlerinin kontrolune 
+    //  gerek yoktur. Bu yuzden, ilk TRUE olan degiskenin degeri sonuc olarak ortaya
+    //  konur. Hicbiri TRUE degilse en sondaki deger sonuc olarak ele alinir
+        console.log( s2 || s3 );    //  Kus
+
+    //  && isleminde ilk FALSE degerin bulunmasi yeterlidir. Digerlerinin kontrolune 
+    //  gerek yoktur. Bu yuzden, ilk FALSE olan degiskenin degeri sonuc olarak ortaya
+    //  konur. Hicbiri TRUE degilse en sondaki deger sonuc olarak ele alinir
+        console.log( s2 && s3 );    //  Kedi
+
+        console.log( "" || 0 || "asd" || undefined );   //  asd
+        //console.log( "" || 0 || asd || undefined );    //  hata verir. asd is not defined
+        console.log( "" || 0 || 12 || undefined );      //  12
+        console.log( 12 && 0 && "bc" && undefined );    //  0
+
+    //  0, false, null, undefined, "" ve NaN disindaki durumlar TRUE kabul edilir
+        s2 = true;
+        s3 = true;
+        console.log( s2 && true );  //  true
+        console.log( s2 && s3 );    //  true
+        console.log( s2 && s3 && false );   //  false
+
+        s3 = false;
+        console.log( s2 || s3 || false );   //  true
+        console.log( s3 || ( s2 && s3 );    //  false
+
+        s3 = null;
+        console.log( s2 && s3 );    //  null
+        console.log( s2 || s3 );    //  true
+
+        s3 = false;
+        console.log( !s2 );     //  false
+        console.log( !s3 );     //  true
+
+        s2 = null;
+        console.log( !s2 );     //  true
+
+    </script>
+</body>
+</html>

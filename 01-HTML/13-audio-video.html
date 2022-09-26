@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Application</title>
+  </head>
+
+  <body>
+    <h3>Audio and Video Applications</h3>
+    <!-- <audio> Sayfaya ses ekleme islemi audio tag'i ile yapilir -->
+    <!-- <audio> ile birlikte gelen (controls="" autoplay="" muted="") attribute'ler 
+          aslinda yeni browser'ler tarafindan cok kullanilmazlar. O nedenle icleri bos 
+          olarak gelirler. Otomatik olarak ses dosyasini calistirdigi icin cok 
+          istenmezler. Ornek ses dosyalari icin : https://samplelib.com/  -->
+
+    <audio controls="" autoplay="" muted="">
+      <source src="Files/sample-12s.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- controls kullanarak button'larin gelmesini sagliyoruz -->
+    <!-- mp4, webm, ogg uzantili dosyalar kullanilabilir ancak, 
+          en cok desteklenen mp4 tur. Sample free video dosyalari icin pexels.com -->
+
+    <pre></pre>
+    <a href="Files/pexels-alexander-grigorian-10779129.mp4" 
+        title="Video oynatir"
+        target="_blank">
+        Video icin Tikla
+    </a>
+    <br>
+
+    <video width="360" height="320" controls>
+      <source
+        src="Files/pexels-alexander-grigorian-10779129.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag
+    </video>
+  </body>
+</html>

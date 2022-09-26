@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .darkMode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+  </head>
+  <body>
+    <input type="button" value="Dark Mode" id="btnMode" onclick="modeChange()"/>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum
+      qui voluptatibus nisi a nihil minima, praesentium, voluptas officiis
+      aliquam vero? Corporis, voluptatem. Vitae doloribus, ea praesentium esse
+      pariatur ducimus? Possimus odio in, adipisci illum sunt cumque saepe
+      impedit quisquam consectetur voluptatem officia iure, similique sint fugit
+      officiis dicta ratione nisi id totam voluptatum, iusto soluta eius
+      temporibus. Repudiandae, deserunt. Doloribus veniam explicabo laborum
+      impedit ipsa molestias veritatis quibusdam facere temporibus obcaecati!
+      Amet exercitationem vero iure sed cum obcaecati similique est qui, ad
+      neque excepturi dolore atque reiciendis consequatur ex. 
+    </p>
+    <script>
+      let mod = "light";    //  Default olan degeri mod degiskenine atadik
+      function modeChange() {
+        if (mod == "light") {
+          document.querySelector("body").classList.add("darkMode");
+          document.querySelector("#btnMode").value = "Light Mode";
+          mod = "dark";
+        } else {
+          document.querySelector("body").classList.remove("darkMode");
+          document.querySelector("#btnMode").value = "Dark Mode";
+          mod = "light";
+        }
+      }
+    </script>
+  </body>
+</html>

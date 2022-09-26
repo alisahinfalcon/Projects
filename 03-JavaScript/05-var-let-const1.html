@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Let Const</title>
+</head>
+<body>
+    
+
+    <script>
+        var x = 5;
+        var x = 6;
+        console.log("x = " + x);
+
+        x = 4;
+        console.log("x = " + x);
+        
+        x = 8;
+        console.log("x = " + x);
+
+        let y = 5;  // let, var gibi degildir. Bir degisken let ile tanimlandi 
+                    //  ise tekrar tanimlanamaz. O nedenle var yerine let kullanmak 
+      //let y = 6;  //  daha mantiklidir.
+        y = 7;
+        console.log("y = " + y);
+
+        const pi = 3.14;    //  const turu tanimlamada ilk deger atamasi yapilmak zorundadir
+        console.log("pi = " + pi);
+
+        console.log("y = " + y +" , " + "pi = " + pi);
+
+        let enBuyukTamsayi = Number.MAX_SAFE_INTEGER;
+        console.log(enBuyukTamsayi);
+        console.log(enBuyukTamsayi + 5 == enBuyukTamsayi + 8);
+        
+        var testTamsayi = 12345678912345678912n;
+        console.log(testTamsayi + 5n == testTamsayi + 8n);
+
+        let s;
+        console.log(s);
+        s = "12";
+        console.log(typeof(s));
+
+    </script>
+</body>
+</html>

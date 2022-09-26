@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayi Bulma</title>
+</head>
+<body>
+    
+    <script>
+
+        let uretilen = Math.floor(Math.random() * 100) + 1;
+        //  1 ile 100 arasi rastgele sayi uretttik
+        //  console.log(uretilen);
+
+        while(1){   //  Her kosulda icine girecektir. Bunu block olusturmak icin kullandik
+
+            let sayi = prompt("Bir sayi giriniz"); 
+
+            if( sayi == 0 || sayi == null){
+                break;
+            }
+
+            if( sayi > uretilen ){
+                alert("Buyuk sayi girdiniz");
+            }
+            else if( sayi < uretilen ){
+                alert("Kucuk sayi girdiniz");
+            }
+            else if( sayi == uretilen ){
+                alert("Tebrikler bildiniz");
+                break;
+            }
+        }
+
+        document.write0(`Uretilen sayi : ${uretilen}`);
+
+    </script>
+</body>
+</html>

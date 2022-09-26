@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Verilen sayilar dizisi icinde en buyuk degeri bulunuz</p>
+    <p>[12, 56, 14, 67, 89, 33, 22]</p>
+
+    <script>
+
+        let sayilar = [12, 56, 14, 67, 89, 33, 22];
+        let enbuyuk = sayilar[0];   //  enbuyuk degeri ilk eleman olarak aldim
+
+        for(let i = 0 ; i < sayilar.length ; i++){  //  i = 1 ;de yazilabilirdi ki ilk karsilasmayi atlamis olurduk
+
+            if( sayilar[i] > enbuyuk ){
+                enbuyuk = sayilar[i];
+            }
+            
+        }
+        console.log(enbuyuk);
+        document.write(enbuyuk);
+    </script>
+    
+</body>
+</html>

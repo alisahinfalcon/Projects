@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAT Deregistration Form</title>
+
+    <style>
+        .back{
+            background-color: rgb(113, 12, 12);
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <table class=".back">
+            <tr>
+                <label>VAT Number</label> <br>
+                <input type="text" name="" id="boxVat" size="60px">
+                <div id="lblVat"></div>
+            </tr>
+            <br> 
+            <tr>
+                <label>Name</label> <br>
+                <input type="text" name="" id="boxFirst" size="24" placeholder="First">
+                &nbsp; &nbsp;
+                <input type="text" name="" id="boxLast" size="27" placeholder="Last">
+            </tr> <br> <br>
+            <tr>
+                <label>Phone</label> <br>
+                <input type="tel" name="" id="boxPhone" size="60px" placeholder="### ### ####">
+            </tr> <br> <br>
+            <tr>
+                <label>Address</label> <br>
+                <input type="text" name="" id="boxAddressLine1" size="60px" placeholder="Street Address"> <br> <br>
+                <input type="text" name="" id="boxAddressLine2" size="60px" placeholder="Street Address Line 2"> <br> <br>
+                <input type="text" name="" id="boxCity" size="24px" placeholder="City"> &nbsp &nbsp
+                <input type="text" name="" id="boxRegion" size="27px" placeholder="Region"><br> <br>
+                <input type="text" name="" id="boxZipCode" size="24px" placeholder="Zip Code"> &nbsp &nbsp
+                <input type="text" name="" id="boxCountry" size="27px" placeholder="Country"><br> <br>
+            </tr>
+            <tr>
+                <label>Why are you applying to cancel your registration?</label> <br>
+                <input type="text" name="" id="boxCancellation" size="60px"> <br> <br>
+            </tr> <br>
+            <tr>    
+                <label for="">On which date did you stop making taxable suppliers</label> <br>
+                <input type="datetime-local" name="" id="boxDateTax" size="60px">
+            </tr>
+        </table>
+        <div id="lblVat"></div>
+        <div id="lblFirst"></div>
+        <div id="lblLast"></div>
+        <div id="lblPhone"></div>
+    </form>
+
+    <script>
+
+        let vatNumber = document.querySelector("#boxVat").value;
+        let nameFirst = document.querySelector("#boxFirst").value;
+        let  nameLast = document.querySelector("#boxLast").value;
+        let  phoneNum = document.querySelector("#boxPhone").value;
+        let addressL1 = document.querySelector("#boxAddressLine1").value;
+        let addressL2 = document.querySelector("#boxAddressLine2").value;
+        let      city = document.querySelector("#boxCity").value;
+        let    region = document.querySelector("#boxRegion").value;
+        let   zipCode = document.querySelector("#boxZipCode").value;
+        let   country = document.querySelector("#boxCountry").value;
+        let cancelTxt = document.querySelector("#boxCancellation").value;
+        let   taxDate = document.querySelector("#boxdateTax").value;
+        
+        //document.querySelector("#lblVat").innerHTML = `${vatNumber}`;
+        //document.querySelector("#lblFirst").innerHTML = `${nameFirst}`;
+        //document.querySelector("#lblLast").innerHTML = `${nameLast}`;
+        //document.querySelector("#lblPhone").innerHTML = `${phoneNum}`;
+    </script>
+</body>
+</html>

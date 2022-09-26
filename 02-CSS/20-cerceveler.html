@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerceveler</title>
+
+    <Style>
+        .elma{
+            background-color: yellowgreen;
+            display: inline-block;
+            padding: 5px;  /* inline olsa padding uygulayamazdik. inline-block 
+                            yapinca padding (ic bosluk) kullanabildik */
+            padding: 5%;
+         }
+        .armut1{
+            border:5px outset red; /* solid dashed dotted outset */
+        }
+        .armut2{
+            border-left: 8px outset blue;
+            border-right: 8px outset blue;
+            border-radius: 10px;
+        }
+        .armut3{
+            border-radius: 8px;
+        }
+        .armut4{
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="elma armut1 armut2">Hello World</div>
+    <pre></pre>
+    <div class="elma armut2">Merhaba Dunya</div>
+    <pre></pre>
+    <div class="elma armut3">Hello World</div>
+    <pre></pre>
+    <div class="elma armut4">Merhaba Dunya</div>
+</body>
+</html> 

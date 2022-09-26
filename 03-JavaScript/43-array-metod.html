@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let sonuc = ""; //  array 'lerin outputlarini gormek icin'
+
+        const sayilar = [23, 65, 105, 41, 67, 78, 12];
+        console.log("dizimiz");
+        console.log(sayilar);   //  toplamda 7 elemanli dizi olusturduk
+    
+    //  1. push method'u dizinin sonuna bir yada daha fazla eleman ekler
+        console.log("push method")
+
+        sayilar.push(33, 45);   //  diziye yeni iki eleman ekledi
+        console.log(sayilar);   //  [23, 65, 105, 41, 67, 78, 12, 33, 45]
+
+        sonuc = sayilar.push(54);   //  diziye yeni eleman ekledi ve dizinin toplam 
+                                    //  eleman sayini sonuc degiskenine aktardi
+        console.log(sonuc);         //  10
+        console.log(sayilar);       //  [23, 65, 105, 41, 67, 78, 12, 33, 45, 54]
+
+    //  2. pop method'u dizinin sonundan eleman siler
+
+        console.log("pop method");
+
+        sayilar.pop();          //  dizinin son elemanini sildi. 54 silindi
+                                //  [23, 65, 105, 41, 67, 78, 12, 33, 45]
+        sonuc = sayilar.pop();  //  dizinin son elemanini sildi. 45 silindi ve 
+                                //  sonuc degerine sildigi elemani atar 
+                                //  [23, 65, 105, 41, 67, 78, 12, 33]
+
+        console.log(sonuc);     //  45 => diziden sildigi elemani verir
+        console.log(sayilar);   //  [23, 65, 105, 41, 67, 78, 12, 33]
+        
+
+    //  3. shift method'u pop gibi fakat dizinin basindan siler ve sildigi 
+    //                      elemani geri dondurur
+
+        console.log("shift method");
+
+        sonuc = sayilar.shift();    //  ilk elemani siler
+        
+        console.log(sonuc);         //  23 degerini sildi ve sonuc 'a atadi
+        console.log(sayilar);       //  [65, 105, 41, 67, 78, 12, 33]
+        
+
+    //  4. unshift method'u push gibi fakat dizinin basina eleman ekler 
+    //                      ve dizinin size 'ini geri dondurur
+
+        console.log("unshift method");
+
+        sonuc = sayilar.unshift(34);//  dizinin basina 34 degerini ekler
+
+        console.log(sonuc);     //  8 => dizinin toplam eleman sayisini dondurur
+        console.log(sayilar);   //  [34, 65, 105, 41, 67, 78, 12, 33]
+        sayilar.unshift(1005);  //  [1005, 34, 65, 105, 41, 67, 78, 12, 33]
+        
+
+    //  5. sort method'u diziyi kucukten buyuge (alphabetic) olarak siralar
+
+        console.log("sort method");
+
+        sayilar.sort(); //  alfabetic siraladigi icin yanlis oldu.Yani once 1 rakamini goruyor. 
+                        //  O nedenle 1005 basa geldi. Siralamayi alfabetic manada yapiyor.
+        console.log(sayilar);   //  sayilar harflerden once gelir (ascii)
+                                //  [1005, 105, 12, 33, 34, 41, 65, 67, 78]
+                                //  string olsaydi alfabetic siralayacakti
+        
+        sayilar.sort(function(a, b){return a-b});   //  
+        console.log(sayilar);
+        
+        sayilar.sort(function(a, b){return b-a});
+        console.log(sayilar);
+    
+    //  6. reverse method'u diziyi tersine cevirir
+
+        console.log("reverse methos");
+
+        sayilar.reverse();
+        console.log(sayilar);   //  [12, 33, 34, 41, 65, 67, 78, 105, 1005]
+    
+    //  7. splice method'u belirtilen index'ten itibaren dizinin elemanlarini siler
+
+        console.log("splice methos");
+    //  A.
+        console.log("A");
+        sayilar.splice(6);      //  6. index de dahil olmak uzere ileri dogru tum 
+                                //  elemanlari siler
+        console.log(sayilar);   //  [12, 33, 34, 41, 65, 67]
+
+    //  B.
+        console.log("B");
+        sayilar.splice(3,1);    //  3. index'e gelir ve 3 dahil olmak uzere 1 elemani siler
+                                //  Burada 3. eleman silinmis olur
+        console.log(sayilar);   //  [12, 33, 34, 65, 67]  41 degeri silindi
+
+    //  C.
+        console.log("C");
+        sayilar.splice(3,1,77,95);  //  3. index'e gelir ve 3 dahil olmak uzere 1 elemani siler
+                                    //  Sonrada ayni yerden itibaren 77 ve 95 degerlerini ekler
+        console.log(sayilar);       //  [12, 33, 34, 77, 95, 67]  65 degeri silindi
+
+    //  D.
+        console.log("D");   
+        sayilar.splice(4,0,11,23);  //  4. index'e gelir ve 0 dan oturu silme yapmaz ve 
+                                    //  4. indexi oteler ve araya 11 ve 23 degerlerini ekler
+        console.log(sayilar);       //  [12, 33, 34, 77, 11, 23, 95, 67]  
+
+    //  7. includes method'u ozellikle if statement larda kullanilir
+
+        sonuc = sayilar.includes(55);
+        console.log(sonuc);             //  false verir. Cunku dizide 55 degeri yok
+        sonuc = sayilar.includes(12);
+        console.log(sonuc);             //  true verir. Cunku dizide 12 degeri var
+
+    </script>
+</body>
+</html>

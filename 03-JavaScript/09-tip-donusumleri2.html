@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types2</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            0, null, undefined, NaN ve "" (hiclik) javascript tarafindan false kabul 
+            edilir. Diger tum degerler Boolean'a cevrildiginde true olarak kabul edilir.
+        */
+
+        let puan;
+        let tanimsiz = undefined;
+        let maas = 123;
+        let Maas = 321; //  Javascript case sensetive oldugundan farkli iki 
+                        //  variable olarak ele alir
+        let d1 = Boolean(maas); //  maas bir degere sahip oldugundan d1 = true olur
+
+        console.log(d1);    //  true
+        console.log(Boolean(Maas));     //  true
+        console.log(Boolean("Maas"));   //  true
+        console.log(Boolean(""));       //  false, hiclik degerine sahip oldugundan
+        console.log(Boolean(" "));      //  true
+        console.log(Boolean(tanimsiz)); //  false, undefined type oldugu icin
+        console.log(Boolean(puan));     //  false, undefined oldugundan
+        console.log(Boolean(0));        //  false, sifir oldugu icin 
+        console.log(Boolean(Number("abcd"))); // false
+        //  Number("abcd") ==> NaN verir. 
+        //  Boolean(Number("abcd")) ==> false
+        //  console.log(Boolean(Number(abcd))); //  Bu durumda hata verir. Calismaz, cunku abcd
+                                                //  tanimsizdir.
+        console.log(Boolean(NaN));      //  false
+        console.log(Boolean(null));     //  false
+
+    </script>
+</body>
+</html>

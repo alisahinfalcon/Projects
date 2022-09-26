@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplama</title>
+</head>
+<body>
+    <input type="number" id="sayi1" placeholder="Sayi 1">
+    
+    <input type="number" id="sayi2" placeholder="Sayi 2">
+
+    <input onclick="toplam()" type="button" value="Topla">
+    
+    <!--<button onclick="toplam()">Topla</button> -->
+    <!-- Button'a tiklaninca toplam() fonsiyonu calisir -->
+
+    <div id="sonuc"></div>
+
+    <script>
+        function toplam(){
+
+            let s1 = document.querySelector("#sayi1").value;
+            /* ilk input degerini (sayi 1) alir */
+            let s2 = document.querySelector("#sayi2").value;
+            /* ilk input degerini (sayi 1) alir */
+        
+            let result = Number(s1) + Number(s2);
+            /* let result = s1 + s2; 
+                    Bu sekilde yazildiginda concatanate yapiyor   */
+
+            document.querySelector("#sonuc").innerHTML = `<br> Toplam = <b>${result}<b>`;
+        }
+        
+        
+    </script>
+</body>
+</html>

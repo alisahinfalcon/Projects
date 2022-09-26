@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const year = 2022;
+        const dt = 1980;
+        console.log("YAS : " + year - dt);   //  Bu haliyle NaN verir
+        console.log("YAS : " + (year - dt)); //  Bu sekli ile duzgun calisir
+
+        
+        const s1 = 2022;
+        const s2 = 1980;
+        console.log("Sonuc : " + (s1 - s2)); //  42
+
+        console.log(`Sonuc : ${s1-s2}`);    // 42
+
+        const pi = 3;
+        const r = 3;
+        const alan = pi*r**2;
+        const cevre = 2*pi*r;
+        console.log(cevre, alan);   //  18  27
+        console.log("Cevre: " + cevre , " Alan: " + alan);  //  Cevre: 18  Alan: 27
+
+        let a = 3;      //  a = 3 
+        let b = ++a;    //  b = 4 ,  a 'yi bir artir (a = 4) sonra a degerini b 'ye aktar
+        let c = --a;    //  c = 3 ,  a 'dan bir cikar (a = 3) sonra a degerini c 'ye aktar
+        console.log(a, b, c);   //  3  4  3
+
+        let d = 2;      //  d = 2 
+        let e = d++;    //  e = 2 ,  d 'yi e 'ye aktar (e = 2) sonra d 'ya bir ekle (d = 3)
+                        //          
+        let f = --d;    //  f = 2 ,  d 'dan bir cikar (d = 2) sonra f 'ye aktar
+        console.log(d, e, f);   //  2  2  2
+
+        //  Her iki farkli durumda da a veya d degeri degisiyor. 
+        //  Duruma gore degisimden obce veya degisimden sonra atama islemi yapiliyor
+
+        a += 5; //  a = a + 5  ==>  8 ,  a 'nin son degeri 3 olarak geldigi icin
+        console.log(a);
+
+        const elma = 123;
+       document.write(`Birler basamagi: ${elma%10}`);   //  3
+
+    </script>
+</body>
+</html>

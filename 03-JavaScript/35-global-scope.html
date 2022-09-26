@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global-Scope</title>
+</head>
+<body>    
+
+    <script>
+        let x = 10;
+        test();
+
+        console.log("foksiyon disi1 : " +  x++);/*  20 yazdirir sonra artirir */
+        console.log("foksiyon disi1 : " + x);   /*  21 yazdirir */
+
+        console.log("foksiyon disi2 : " +  ++x);/*  bir artirir 22 yazdirir */
+        console.log("foksiyon disi2 : " + x);   /*  22 */
+
+        function test(){
+            x = 20;
+            console.log("Fonksiyon ici : " + x);
+        }   /* Cagrilmadan fonksiyon icerisine asla girmez */
+
+    </script>
+</body>
+</html>

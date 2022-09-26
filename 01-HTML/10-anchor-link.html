@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a tag (Anchor) Application</title>
+  </head>
+
+  <!-- Shıft + Alt + F   sayfayi duzenler -->
+  <!-- Eger href="" ifadesinden sonra title cikmiyorsa biz kendimiz yazariz. Bu kisim
+        mouse tikla uzerine geldiginde title da yazan ifadeyi yazar -->
+  <!-- href="" yazdigimizda icine yazilacak html dosya ismini hatirlamiyorsak, tirnaklar 
+        silinirde yeniden acilirsa bize folderimizdaki dosyalardan oneride bulunur -->
+  <!-- title="Merhaba Dunya" hover (mouse'un el hali title uzerine gelince buradaki aciklamayi yazar) -->
+  
+  <body>
+    <h1>a tag'i hangi durumlarda kullanilir</h1>
+    <h3>Bir sayfadan baska bir sayfaya link vermek</h3>
+    <a href="01-ilk-dosya.html" title="Merhaba Dunya"> Tikla </a>
+
+    <!-- href="#urunler" yazinca asagidaki paragraf icerisinde id="urunler" yazan
+          ayni sayfadaki paragrafa gider -->
+
+    <h3>Ayni sayfada farkli bir bolume link vermek</h3>
+    <a href="#urunler" title="Ayni sayfadaki urunler ile ifade edilen paragrafa gider"> Urune git </a>
+
+    <!-- href="02-paragraf.html#projeler" denildiginde 02-paragraf.html isimli farkli
+          bir sitenin icerisinde bulunan 'projeler' diye baslayan paragrafa gider -->
+    
+          <h3>Bir sayfadan baska bir sayfanin farkli bir bolumune link vermek</h3>
+    <a href="02-paragraf.html#projeler" title="Projelere gider">Projelere Git</a>
+
+    <!-- href="https://www.google.com/" burada adresi verilen siteye gecer. Burada 
+          target="_blank" yazarak gidilen sitenin baska bir 'tab' altinda acilmasini saglar  -->
+    <!-- target="_blank"  baska bir tab icinde siteyi acar "New tab to the right" -->
+    <!-- Buradaki linki yazmak icin once google sayfasina gidip, google sayfasinin adresinin
+          kopyalanmasi isimizi saglama almak olur. Elbette ki elimizle de yazabiliriz -->
+
+    <h3>Baska bir siteye link vermek</h3>
+    <a href="https://www.google.com/" title="Yeni bir sayfaya gidiyoruz" target="_blank">Google'a Git</a>
+
+    <!-- Burada adresi verilen sayfanin projenin icerisinde olmasi gerekir. Aksi halde
+          adresi bulmasi icin https://  ile baslanmasi gerekir -->
+    <!-- href= yazdiktan sonra VS Code bize opsiyon sunacak. Files dosyasini secince ardindan Files icerisindeki
+          resim, pdf ve diger dosya turleri gozukecektir. Buradan istedigimiz dosyayi secebiliriz.
+          Klasor ismi ve icerisindeki dosya ismi biliniyorsa direkt olarak kendimiz de yazabiliriz -->
+    
+    <h3>Bir dosyaya Link verme (Image, pdf, zip files)</h3>
+    <a href="Files/pexels-pixabay-56866.jpg" title="Bir resim dosyasi acar" target="_blank">Open Photo</a>
+    <pre></pre>
+    <!-- <pre></pre> tag'i ile bir satir asagiya gecmis oluruz. <br> ile ayni isi yapar 
+          fakat <pre> arada bir fazla bosluk birakir-->
+    <a href="Files/Salesforce Ne Yapar.pdf" title="PDF dosyasi acilacak" target="_blank">Open pdf</a>
+    <pre></pre>
+    <a href="Files/turkce-brosur.pdf.zip" title="Zip File download eder">Open Zip file</a>
+    <pre></pre>
+    <h3>Telefon numarasina Link vermek</h3>
+    <a href="tel:+905377851768">Call us</a>
+
+    <!-- Whatsapp kendisi bir uygulama ile bize href adresini veriyor. Bunun icin google'da
+          arama kismina "wa.me link" yazarsak bize whatsapp yardim alaninin adresini veriyor. 
+          O kisma tikladigimizda bize kullanacagimiz formati gosteriyor. Bu format
+          https://wa.me/<numara> seklindedir. Ornegin
+          https://wa.me/1XXXXXXXXXX  
+          https://wa.me/1XXXXXXXXXX? text=Satilik%20arabanizla%20ilgili%20gorusmek%20istiyorum -->
+    <h3>WhatsApp'a Link verme</h3> 
+    <a href="https://wa.me/12247046484" target="_blank">WhatsApp Call</a>
+    <br>
+    <!-- Asagidaki gibi text de gondermek istersek buradaki gibi yazilabilir -->
+    
+    <a href="https://wa.me/12247046484? text=Satilik%20arabanizla%20ilgili%20gorusmek%20istiyorum" target="_blank">Ara Beni</a>
+    
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed et amet
+      sunt, hic necessitatibus dolores natus dolor, cumque possimus eaque odit
+      quasi quo, reiciendis libero harum nisi rerum nam! Quaerat? Repudiandae id
+      vel quos quia fugit est sint placeat sed quam impedit, rem recusandae
+      fugiat eveniet, praesentium obcaecati aut corporis nihil facere molestias
+      assumenda totam repellat quas corrupti tempora? Assumenda? Sapiente
+      laudantium consequuntur harum corrupti quam, assumenda quo quaerat ea
+      necessitatibus quos perspiciatis voluptatem eveniet aliquid error vitae
+      praesentium adipisci debitis. Aperiam magnam dolores, sunt ullam quod
+      beatae praesentium nemo!Sapiente laudantium consequuntur harum corrupti
+      quam, assumenda quo quaerat ea necessitatibus quos perspiciatis voluptatem
+      eveniet aliquid error vitae praesentium adipisci debitis. Aperiam magnam
+      dolores, sunt ullam quod beatae praesentium nemo!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda
+      sequi deserunt a perspiciatis tempora porro nemo dolores soluta similique
+      saepe obcaecati aperiam accusantium accusamus neque fuga est, sed non.
+      Animi, eius excepturi? Ad aspernatur totam quisquam eaque ab similique
+      modi quos. Obcaecati natus, commodi eum accusantium odio voluptatem eius
+      iure qui. Optio nam nobis iste ut error accusantium a. Molestiae ipsa
+      ullam fugiat quo aliquam sequi nesciunt animi, voluptatibus nulla minima
+      iusto provident dicta aliquid, reprehenderit voluptatem iste ipsam
+      expedita voluptates, nam laboriosam consequuntur? Iste debitis velit
+      voluptas ipsa.
+    </p>
+    <p id="urunler">
+      <b>Elma, Armut ve Uzum</b> ipsum dolor sit amet consectetur adipisicing
+      elit. Aspernatur consectetur aliquam deserunt aut. Eligendi perspiciatis
+      ab odio modi ipsa earum laboriosam cupiditate incidunt, quo, enim impedit
+      accusantium accusamus sunt quae? Ipsam voluptate distinctio dolores
+      delectus fuga consequuntur sit nulla officia quidem nisi illo iure
+      corporis, voluptas recusandae dignissimos iste veritatis tempora odit cum
+      enim optio. Perferendis quia harum iure reprehenderit? Ea illo delectus
+      illum quibusdam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda
+      sequi deserunt a perspiciatis tempora porro nemo dolores soluta similique
+      saepe obcaecati aperiam accusantium accusamus neque fuga est, sed non.
+      Animi, eius excepturi? Ad aspernatur totam quisquam eaque ab similique
+      modi quos. Obcaecati natus, commodi eum accusantium odio voluptatem eius
+      iure qui. Optio nam nobis iste ut error accusantium a. Molestiae ipsa
+      ullam fugiat quo aliquam sequi nesciunt animi, voluptatibus nulla minima
+      iusto provident dicta aliquid, reprehenderit voluptatem iste ipsam
+      expedita voluptates, nam laboriosam consequuntur? Iste debitis velit
+      voluptas ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae assumenda sequi deserunt a perspiciatis tempora porro nemo dolores
+      soluta similique saepe obcaecati aperiam accusantium accusamus neque fuga
+      est, sed non. Animi, eius excepturi? Ad aspernatur totam quisquam eaque ab
+      similique modi quos. Obcaecati natus, commodi eum accusantium odio
+      voluptatem eius iure qui. Optio nam nobis iste ut error accusantium a.
+      Molestiae ipsa ullam fugiat quo aliquam sequi nesciunt animi, voluptatibus
+      nulla minima iusto provident dicta aliquid, reprehenderit voluptatem iste
+      ipsam expedita voluptates, nam laboriosam consequuntur? Iste debitis velit
+      voluptas ipsa.
+    </p>
+  </body>
+</html>

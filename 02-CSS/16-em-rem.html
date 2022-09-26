@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem Application</title>
+
+    <Style>
+
+        /* standard'i (default) 1em */
+        body{
+            font-size: 2em; 
+        }
+
+        /* body'den 2em ve buradan da 2em gelince toplam 4em oldu */
+        .kutu1{
+            font-size: 2em ; 
+        }
+
+        /* body'den 2em, kutu1 den de 2em, birde kendisi 2em denince 
+            toplam da 2x2x2=8em oldu */
+        .kutu2{
+            font-size: 2em;
+        }
+
+        /* standard'i (default) 1rem */
+        html{
+            font-size: 1rem;
+        }
+        /* .kutu3 ve .kutu4 html'e bakar, birbirilerine bakmazlar */
+        .kutu3{
+            font-size: 2rem;
+        }
+        .kutu4{
+            font-size: 2rem;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="kutu1"> 1Merhaba
+        <div class="kutu2">
+            2Dunya
+        </div>
+    </div>
+    <div class="kutu3"> 3Merhaba
+        <div class="kutu4">
+            4Dunya
+        </div>
+    </div>
+    Btest
+</body>
+</html>

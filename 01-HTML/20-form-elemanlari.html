@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Application</title>
+</head>
+
+<!-- Formlar icin farkli type'lar -->
+
+<body>
+    <form action="">
+        <!-- minlenght ve maxlenght kutuya yazilacak karakter (text) sayisini sinirlar -->
+        <label for="ad">Adi Soyadi</label>
+        <input type="text" name="ad" id="ad" minlength="4" maxlength="30" required> <br>
+
+        <!-- min ve max kutuya yazilacak sayinin en kucuk ve en buyuk sayi degerlerini sinirlar -->
+        <label for="yas">Numara</label>
+        <input type="number" name="yas" id="yas" min="3" max="6"> <br>
+
+        <!-- checkbox, hidden, range cannot be assigned as a required -->
+        <label for="eposta">Eposta</label>
+        <input type="email" name="eposta" id="eposta" placeholder="info@company.com" required> <br>
+
+        <label for="sifre">Password</label>
+        <input type="password" name="sifre" id="sifre"> <br>
+
+        <!-- for="neyazdiksa"    id="neyazdiksa"  oldugunda Search kismina basinca kutuya giriyor -->
+        <label for="q">Search</label>
+        <input type="search" name="q" id="q"> <br>
+
+        <label for="site">Website</label>
+        <input type="url" name="site" id="site"> <br>
+
+        <label for="ali">Phone</label>
+        <input type="tel" name="" id="ali"> <br>
+
+        <!-- kisi bilgileri id=456 olan bilgi sunucuya gonderilir. hidden type'lara 
+            required konulamaz -->
+        <input type="hidden" name="id" value="456">
+
+        <!-- form action="" kisminda yazilan yere bilgileri submit eder -->
+        <input type="submit" value="Gonder">
+
+        <!-- <input type="button | submit | reset" name="btn" value="Kaydet"> -->
+        <!-- button : Genel amacli, default olarak bir gorevi yok -->
+        <!-- submit : Form bilgileri toplar ve backend e gondermeye calisir. 
+                      Action'da yazan yere gondermeye calisir amacli, default olarak bir gorevi yok -->
+        <!-- reset : Adi uzerinde bilgileri resetler -->
+
+    </form>
+</body>
+</html>

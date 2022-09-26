@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Burada renk once link ile external den gelir.
+        Daha sonra linki takip eden style dan gelir.
+        Burada style03.css de .baslik classi var diye dusunerek soyluyoruz.
+        Hedefe yakin olan etkin oluyor. Burada ikinci link daha etkin. 
+        Link olmazsa style icindeki renk etkin olur. css dosyasindan gelen 
+        h1.baslik ise en etkin olani -->
+    <link rel="stylesheet" href="style03.css" />
+    <style>
+      .baslik {
+        color: blue;
+      }
+    </style>
+    <link rel="stylesheet" href="style03.css" />
+  </head>
+  <body>
+    <h1 class="baslik">Benim rengim ne?</h1>
+  </body>
+</html>

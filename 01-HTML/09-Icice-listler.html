@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Icice Listler</title>
+  </head>
+
+  <!-- Shift + Alt + A     Aciklama icin short cut -->
+  <!-- ol>li*2>ul>li*3 seklinde kısayoldan yapabiliriz -->
+  <!--  <ol type="1 | A | a | I | i " seklinde yazilirsa 1,2,... 
+                                    yerine A, B, ... sekilinde yazar. Dafault is 1 -->
+  <!-- ol>li*2>ul>li*3 seklinde kısayoldan yapabiliriz -->
+  <!-- <ul type="circle | square | disc"  alt listedeki bulletlar. Circle is default-->
+  <!-- type="A" ifadesi bullet'larin tipini belirler. Bullet'lar harf olacak der -->
+  <!-- start="3" ifadesi bullet degerinin nereden baslayacagini soyler. 
+        3 ifadesi C ile baslayacagini soyler. <ol> ile kullanilir. 
+        <ul> ile kullanilmaz cunku unordered list'de bullet kullanilir -->
+  <!-- type="I" veya type="i" roman rakamlarini ifade eder -->
+  <body>
+    <ol type="I" start="5">  <!-- start baslangic degerini belirleyen attribute -->
+      <li>
+        Istanbul
+        <ul>  <!-- circle default bullet listesidir -->
+          <li>Besiktas</li>
+          <li>Fenerbahce</li>
+          <li>Galatasaray</li>
+        </ul>
+      </li>
+      <li>
+        Izmir
+        <ul type="square">  <!-- Attributes -->
+          <li>Altay</li>
+          <li>Goztepe</li>
+          <li>Karsiyaka</li>
+        </ul>
+      </li>
+    </ol>
+    <hr />
+
+    <!-- ol>li*2>lu>li*3  seklinde yazilirsa asagidaki kalip otomatik olarak gelir -->
+    <!-- Attribute : HTML tag'inin icine yazilan ve html tag'ina ek ozellikler katan 
+         ifadelere denir -->
+
+    <ol type="i" start="3">  <!-- attribute -->
+      <li>
+        Illinois
+        <ul type="disc">  <!-- attribute -->
+          <li>Chicago</li>
+          <li>Schaumburg</li>
+          <li>Elgin</li>
+        </ul>
+      </li>
+      <li>
+        Pennsylvania
+        <ul type="circle">  <!-- attribute -->
+          <li>Philadelphia</li>
+          <li>Harrisburg</li>
+          <li>Allentown</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

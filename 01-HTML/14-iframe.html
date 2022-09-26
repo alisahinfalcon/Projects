@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframe Application</title>
+  </head>
+
+  <!-- iframe lerin SEO lar acisindan bir degeri yok -->
+  <!-- Map de share kismindan embed a map kismini kopyaliyoruz -->
+
+  <body>
+    <!-- <iframe> Sayfa icinde farkli bir sitenin sayfasini goruntulemek icin kullanilir.
+          Harita ve youtube videolari bu sekilde eklenir. Siteler kendi sitelerini baskalarina 
+          ait bir sitede goruntulemelerine izin vermiyor. -->
+    <!-- MAP Embed islemi icin, Google Map'e gidelim ve harita uzerinde istedigimiz bir 
+          lokasyona gidelim. Sectigimiz lokasyon uzerinde mouse'un sagina tikliyoruz.
+          (What's here?) kismi menude gozukur. buraya tiklayalim acilan pencerede share kismina 
+          tiklayalim. Share'e tikladiktan sonra cikan sayfada (Embed a Map) kismini seciyoruz. 
+          Bu yeni sayfada (COPY HTML) button'una basarak istedigimiz Map'in adresini Clipboard'a 
+          kopyalamis oluyoruz.  -->
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2800405611083!2d2.329577915102923!3d48.8719378077076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e36d6269c01%3A0xb5108eab7980858e!2sPalais%20Garnier%2C%208%20Rue%20Scribe%2C%2075009%20Paris%2C%20France!5e0!3m2!1sen!2suk!4v1659463125360!5m2!1sen!2suk"
+      width="300"
+      height="225"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <!-- YouTube da videonun altindaki paylas kismina basilir. Cikan ekranda embed yazan 
+          kisma tiklanir ve ardindan cikan kisim clipboard'a kopyalanir.Youtube mp3 ses 
+          dosyalarini embed etmeye izin vermiyor fakat Youtube'da dinlemenize izin veriyor -->
+
+    <iframe
+      width="300"
+      height="170"
+      src="https://www.youtube.com/embed/66hduBdkvTY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    
+  </body>
+</html>

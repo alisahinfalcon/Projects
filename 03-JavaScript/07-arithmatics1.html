@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmatics</title>
+</head>
+<body>
+    
+
+    <script>
+        const x = 5;
+        const y = "5";
+        const z1 = x + y;   // sadece toplama ve concanate islemi karistigi icin 
+                            // problem oluyor. Diger durumlarda hesap yapiliyor
+        const z2 = x * y;
+        const z3 = x - y;
+        const z4 = x / y;
+        
+        console.log(z1);
+        console.log(z2);
+        console.log(z3);
+        console.log(z4);
+        console.log("--------")
+        
+        let a = 5;
+        let b = 4;
+
+        a += 3; 
+        console.log(a); //  a = a + 3  ==> a = 8
+        a -= 2; 
+        console.log(a); //  a = a - 2  ==> a = 6
+        a *= 4; 
+        console.log(a); //  a = a * 4  ==> a = 24
+        a /= 6; 
+        console.log(a); //  a = a / 6  ==> a = 4
+        a **= 3; 
+        console.log(a); //  a = a**3  ==> a = 64
+        a %= 3; 
+        console.log(a); //  a = a % 3  ==> a = 1
+        a &= b; 
+        console.log(a); //  a = a && b  ==> a = 0 , ilk bastaki deger false (0) oldugu icin onu atadi
+        a |= b; 
+        console.log(a); //  a = a || b  ==> a = 4 , ilk false'dan farkli deger true (4, bir deger)
+                        //                          oldugu icin 4 atadi
+    </script>
+</body>
+</html>

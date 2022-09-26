@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Application</title>
+  </head>
+  <!-- Kullanicidan bilgi almak icin kullanilan yapilara form denir. Form icinde 
+      textbox, button, radio button, checkbox vb elemanlar olabilir. -->
+  <!-- form : Tum form elemanlarini icinde barindiran tasiyicidir -->
+  <!-- input : Kullanicidan bilgi almak icin kullanilan form elemanlarinin genel ismi -->
+  <!-- label : Kullaniciya form elemani ile ilgili bilgi vermek icin kullanilan eleman -->
+  <!-- <form>
+       <label>Eposta</label>    ----- Eposta isimli bir etiket yazar
+          <input type="text">   ----- text kutucugu acar ki buradan data girilsin
+          <input type="button" value=Kaydet>  ----- Kaydet isimli bir button olusturur.
+       </form> -->
+
+  <!-- for tag'inin sahip oldugu cesitli attribute'ler vardir -->
+  <!-- <form method="post/get" action="users/update" enctype="multipart/form-data" novalidate> xxxxx </form> -->
+  <!-- method : Genellikle post veya get degeri alir. Formdaki bilgilerin sunucuya hangi 
+                yontemle gonderilecegini belirler -->
+  <!-- action : Form bilgileri ile sunucudaki hangi endpoint ilgilenecekse o belirlenir -->
+  <!-- enctype : Gonderilecek datanin nasil sifrelenecegini (encode) belirlenir. Dosya upload 
+                islemlerinde "multipart/form-data" degerini almasi gerekir -->
+  <!-- novalidate : HTML 5 ile geldi. Dogrulama yapma ben bu islemleri JavaScript ile yapacagim der -->
+  <!-- Kullanicinin girdigi verileri sunucuya gondermek icin "name" isimli bir alan olusturuyor -->
+  <!-- id="" : attribute'tu de name ile birlikte kullanilir. placeholder attribute'u de 
+            icine baslangicta yazilacak bilgiyi verir -->
+  
+  <body>
+    <form action="">
+      <label for="">Eposta</label>
+      <input type="text" name="" id="" placeholder="info@example.com" />
+      <input type="button" value="Kaydet" />
+    </form>
+  </body>
+</html>
